@@ -2,15 +2,23 @@
   "name": "@georgakopoulos-soares-site/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "dev": "concurrently \"npm run dev:cms\" \"npm run dev:@georgakopoulos-soares-site/frontend\"",
+    "dev:cms": "cd apps/cms && npm run develop",
+    "dev:frontend": "nx serve @georgakopoulos-soares-site/frontend"
+  },
   "private": true,
   "dependencies": {
     "@nx/node": "^21.0.0",
+    "@strapi/design-system": "^1.19.0",
     "next": "~15.2.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3"
   },
   "devDependencies": {
+    "@nx-extend/strapi": "^12.1.1",
     "@nx/js": "21.0.0",
     "@nx/next": "21.0.0",
     "@swc-node/register": "~1.9.1",
@@ -20,6 +28,7 @@
     "@types/react": "19.0.0",
     "@types/react-dom": "19.0.0",
     "autoprefixer": "10.4.13",
+    "concurrently": "^9.1.2",
     "nx": "21.0.0",
     "postcss": "8.4.38",
     "prettier": "^2.6.2",

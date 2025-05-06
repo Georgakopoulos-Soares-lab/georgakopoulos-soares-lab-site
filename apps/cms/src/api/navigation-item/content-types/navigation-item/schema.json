@@ -4,7 +4,8 @@
   "info": {
     "singularName": "navigation-item",
     "pluralName": "navigation-items",
-    "displayName": "Navigation Item"
+    "displayName": "Navigation Item",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,35 +17,44 @@
   },
   "attributes": {
     "label": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
+      "type": "string",
       "required": true
     },
     "href": {
-      "type": "string",
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
+      "type": "string",
       "required": true,
       "regex": "^\\/[a-zA-Z0-9\\-\\/]*$"
     },
     "order": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "integer",
-      "required": true,
       "default": 0
     },
     "target": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
       "type": "enumeration",
       "enum": [
         "_self",
-        "_blank",
         "_parent",
+        "_blank",
         "_top"
       ],
       "default": "_self"
