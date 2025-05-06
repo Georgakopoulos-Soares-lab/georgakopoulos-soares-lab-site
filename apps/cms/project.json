@@ -1,0 +1,20 @@
+{
+    "name": "cms",
+    "projectType": "application",
+    "root": "apps/cms",
+    "sourceRoot": "apps/cms",
+    "targets": {
+      "serve": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "cd apps/cms && npm run develop"
+        }
+      },
+      "build": {
+        "executor": "nx:run-commands",
+        "options": {
+          "command": "cd apps/cms && npm run build"
+        }
+      }
+    }
+  }
